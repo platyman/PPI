@@ -1,7 +1,6 @@
 import pygame
 import random
 
-NOIR = (0, 0, 0)
 
 fini = False
 
@@ -315,6 +314,10 @@ def traite_entree():
         elif evenement.type == pygame.KEYUP:
             if evenement.key == TOUCHE_DROITE or evenement.key == TOUCHE_GAUCHE:
                 voiture_joueur['image'] = voiture_joueur['images'][0]
+                
+def musique():
+    musique.play()
+
 temps = pygame.time.Clock()
 
 pygame.KEYPRESSED = pygame.USEREVENT
